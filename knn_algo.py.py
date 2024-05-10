@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import pandas as pd
@@ -17,7 +17,7 @@ data = pd.read_csv("diabetes.csv")
 data.head()
 
 
-# In[5]:
+# In[2]:
 
 
 diabetes_people = data[data.Outcome == 1]
@@ -34,7 +34,7 @@ plt.legend()
 plt.show()
 
 
-# In[7]:
+# In[3]:
 
 
 # diabetes or healthy
@@ -52,7 +52,7 @@ print("\n\nDatas after normalization:\n")
 print(x.head())
 
 
-# In[14]:
+# In[4]:
 
 
 # separate the data into data to train and data to test
@@ -69,7 +69,7 @@ prediction = knn.predict(x_test)
 print("Accuracy result of test data for k=3 ", knn.score(x_test, y_test))
 
 
-# In[15]:
+# In[5]:
 
 
 # best k value review
