@@ -81,6 +81,20 @@ for k in range(1, 11):
     count += 1
 
 
+# In[6]:
+
+
+# predicting for a new patient:
+from sklearn.preprocessing import MinMaxScaler
+ 
+# normalization. minmaxscaller is faster
+sc = MinMaxScaler()
+sc.fit_transform(x_raw_data)
+ 
+new_prediction = knn.predict(sc.transform(np.array([[6,148,72,35,0,33.6,0.627,50]])))
+new_prediction[0]
+
+
 # In[ ]:
 
 
